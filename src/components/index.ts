@@ -1,13 +1,23 @@
 import Container from "./Container/Container";
-import Logo from "./Icons/Logo/Logo";
 import GitHub from "./Icons/GitHub/GitHub";
 import LinkedIn from "./Icons/LinkedIn/LinkedIn";
+import Logo from "./Icons/Logo/Logo";
 import Nav from "./Nav/Nav";
+import ProjectCard from "./ProjectCard/ProjectCard";
+import Section from "./Section/Section";
+import SectionTitle from "./SectionTitle/SectionTitle";
+import Text from "./Text/Text";
+import SubTitle from "./SubTitle/SubTitle";
 
 export {
   Container,
-  Logo,
   GitHub,
   LinkedIn,
-  Nav
+  Logo,
+  Nav,
+  ProjectCard,
+  Section,
+  SectionTitle,
+  Text,
+  SubTitle,
 };

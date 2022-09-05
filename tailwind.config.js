@@ -8,7 +8,26 @@ module.exports = {
   safelist: [],
   theme: {
     extend: {
-      colors: {},
+      backgroundImage: {
+        'intro': "url('/src/assets/bg.svg')"
+      },
+      colors: {
+        bg: {
+          light: '#222220',
+          DEFAULT: '#181818'
+        },
+        primary: {
+          light: '#F0BC04',
+          DEFAULT: '#A8891B'
+        },
+        text: {
+          DEFAULT: '#AAA9A9',
+          dark: '#8B8B8B'
+        }
+      },
+    },
+    fontFamily: {
+      space: ['Space Grotesk', 'sans-serif']
     },
     screens: {
       "xs": "380px",
