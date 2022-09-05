@@ -2,14 +2,14 @@ import GitHub from "../Icons/GitHub/GitHub";
 import LinkedIn from "../Icons/LinkedIn/LinkedIn";
 import { links } from "../../constants";
 
-const SHARED_CLASSES = 'transition-colors hover:text-amber-500 focus:text-amber-500';
+const SHARED_CLASSES = 'transition-colors hover:text-primary-light focus:text-primary-light';
 const MAIN_LINKS = [
   { href: links.projects, content: 'Projects' },
   { href: links.about, content: 'About' },
   { href: links.contact, content: 'Contact' }
 ].map(link => (
   <a
-    className={`text-lg text-white ${SHARED_CLASSES}`}
+    className={`text-lg text-text ${SHARED_CLASSES}`}
     href={link.href}>
     {link.content}
   </a>
@@ -20,7 +20,7 @@ const SOCIAL_LINKS = [
   { href: links.linkedin, content: <LinkedIn /> }
 ].map(link => (
   <a
-    className={`w-6 h-6 text-amber-400 ${SHARED_CLASSES}`}
+    className={`w-6 h-6 text-primary ${SHARED_CLASSES}`}
     href={link.href}>
     {link.content}
   </a>
