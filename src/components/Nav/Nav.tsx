@@ -28,7 +28,7 @@ const SOCIAL_LINKS = [
 
 const Nav = () => {
   return (
-    <nav className="flex flex-col items-center gap-y-2">
+    <nav className="flex flex-col items-center gap-y-2 md:flex-row gap-x-6">
       <div className="flex gap-x-4">
         {MAIN_LINKS}
       </div>
