@@ -10,11 +10,13 @@ import Text from "./Text/Text";
 import SubTitle from "./SubTitle/SubTitle";
 import StatCard from "./StatCard/StatCard";
 import Palette from "./Icons/Palette/Palette";
+import ChevronUp from "./Icons/ChevronUp/ChevronUp";
 
 console.log(Palette);
 
 
 export {
+  ChevronUp,
   Container,
   Palette,
   GitHub,

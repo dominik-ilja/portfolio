@@ -3,6 +3,8 @@ import messenger from '../assets/messenger.jpg';
 import videoChat from '../assets/video-chat.jpg';
 import webShop from '../assets/web-shop.png';
 import Palette from '../components/Icons/Palette/Palette';
+import Database from '../components/Icons/Database/Database';
+import React from '../components/Icons/React/React';
 // import { Palette } from '../components';
 console.log(Palette);
 
@@ -73,8 +75,8 @@ export const githubStats = {
 };
 
 export const technologies = [
-  { title: 'Front End', icon: <Palette />, stack: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'] },
-  { title: 'Back End', icon: <Palette />, stack: ['Nodejs', 'Express', 'MongoDB', 'MySQL'] },
+  { title: 'Front End', icon: <React />, stack: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'] },
+  { title: 'Back End', icon: <Database />, stack: ['Nodejs', 'Express', 'MongoDB', 'MySQL'] },
   { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
   // { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
 ];

@@ -5,7 +5,7 @@ type Props = {
 
 const Text = (props: Props) => {
   return (
-    <p className={`leading-relaxed text-text ${props.className}`}>
+    <p className={`leading-relaxed text-text lg:text-lg ${props.className}`}>
       {props.children}
     </p>
   );

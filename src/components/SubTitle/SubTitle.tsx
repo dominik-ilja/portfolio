@@ -5,7 +5,7 @@ type Props = {
 
 const SubTitle = (props: Props) => {
   return (
-    <h4 className={`text-text-dark ${props.className || ''}`}>
+    <h4 className={`text-text-dark md:text-lg ${props.className || ''}`}>
       {props.children}
     </h4>
   );
