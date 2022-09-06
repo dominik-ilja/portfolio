@@ -1,10 +1,11 @@
 type Props = {
   children?: React.ReactNode;
+  className?: string;
 };
 
 const SubTitle = (props: Props) => {
   return (
-    <h4 className="text-text-dark">
+    <h4 className={`text-text-dark ${props.className || ''}`}>
       {props.children}
     </h4>
   );

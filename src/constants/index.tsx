@@ -2,6 +2,10 @@ import memories from '../assets/memories.png';
 import messenger from '../assets/messenger.jpg';
 import videoChat from '../assets/video-chat.jpg';
 import webShop from '../assets/web-shop.png';
+import Palette from '../components/Icons/Palette/Palette';
+// import { Palette } from '../components';
+console.log(Palette);
+
 
 export const links = {
   home: '#home',
@@ -10,6 +14,7 @@ export const links = {
   contact: '#contact',
   linkedin: 'https://www.linkedin.com/in/dominik-kulak/',
   github: 'https://github.com/Dominik-Ilja',
+  email: 'mailto:dominik.ilja.developer@gmail.com'
 };
 export type Project = {
   image: string;
@@ -58,3 +63,23 @@ export const projects: Project[] = [
     sourceURL: '#',
   },
 ];
+
+export const githubStats = {
+  stars: 9,
+  commits: 260,
+  prs: 39,
+  issues: 28,
+  contributed: 2
+};
+
+export const technologies = [
+  { title: 'Front End', icon: <Palette />, stack: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'] },
+  { title: 'Back End', icon: <Palette />, stack: ['Nodejs', 'Express', 'MongoDB', 'MySQL'] },
+  { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
+  // { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
+];
+// export const technologies = {
+//   frontend: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'],
+//   backend: ['Nodejs', 'Express', 'MongoDB', 'MySQL'],
+//   workflow: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'],
+// };

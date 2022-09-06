@@ -8,9 +8,15 @@ import Section from "./Section/Section";
 import SectionTitle from "./SectionTitle/SectionTitle";
 import Text from "./Text/Text";
 import SubTitle from "./SubTitle/SubTitle";
+import StatCard from "./StatCard/StatCard";
+import Palette from "./Icons/Palette/Palette";
+
+console.log(Palette);
+
 
 export {
   Container,
+  Palette,
   GitHub,
   LinkedIn,
   Logo,
@@ -20,4 +26,5 @@ export {
   SectionTitle,
   Text,
   SubTitle,
+  StatCard,
 };
