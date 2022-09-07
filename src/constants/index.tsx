@@ -1,11 +1,10 @@
-import memories from '../assets/memories.png';
-import messenger from '../assets/messenger.jpg';
-import videoChat from '../assets/video-chat.jpg';
-import webShop from '../assets/web-shop.png';
+import timeTracker from '../assets/time-tracker.png';
+import pokeFinder from '../assets/poke-finder.png';
+import battleship from '../assets/battleship.png';
+import colorCards from '../assets/color-cards.png';
 import Palette from '../components/Icons/Palette/Palette';
 import Database from '../components/Icons/Database/Database';
 import React from '../components/Icons/React/React';
-// import { Palette } from '../components';
 console.log(Palette);
 
 
@@ -29,40 +28,40 @@ export type Project = {
 };
 export const projects: Project[] = [
   {
-    image: memories,
-    imageAlt: 'Memories App',
-    title: 'MERN Memories',
-    description: ` Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.`,
-    stack: ['MongoDB', 'Express', 'React', 'Node'],
-    codeURL: '#',
-    sourceURL: '#',
+    image: timeTracker,
+    imageAlt: 'Time Tracker',
+    title: 'Time Tracker',
+    description: `Time Tracker is an application that allows you to track and visualize how much time you've spent. You create categories and then select a category to put time into. You run the timer and hit complete when you don't want to track time anymore. Your time is then updated with the appropriate category. Your total time for each category is then displayed on the homepage.`,
+    stack: ['MySQL', 'Express', 'React', 'TypeScript'],
+    codeURL: 'https://github.com/Dominik-Ilja/time-tracker',
+    sourceURL: 'https://timer-tracker-ilja.netlify.app/',
   },
   {
-    image: messenger,
-    imageAlt: 'Unichat App',
-    title: 'Unichat',
-    description: `This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application.`,
-    stack: ['React', 'ChatEngine', 'Firebase'],
-    codeURL: '#',
-    sourceURL: '#',
+    image: pokeFinder,
+    imageAlt: 'Poke Finder',
+    title: 'Poke Finder',
+    description: `Poke Finder allows you to search for any of the 905 available Pokemon! This is done by accessing Pokemon information available through the free to use Poke API! You'll be able to see any of your favorite Pokemon in our beautiful light or dark modes.`,
+    stack: ['React', 'React Router', 'Tailwindcss'],
+    codeURL: 'https://github.com/Dominik-Ilja/poke-finder',
+    sourceURL: 'https://poke-finder-ilja.netlify.app/',
   },
   {
-    image: webShop,
-    imageAlt: 'Web Shop App',
-    title: 'E-Commerce',
-    description: ` Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.`,
-    stack: ['React', 'JavaScript'],
-    codeURL: '#',
-    sourceURL: '#',
+    image: battleship,
+    imageAlt: 'Battleship',
+    title: 'Battleship',
+    description: `User plays against an Ai in this interactable web app. Users can drag and drop their game pieces into the grid. The app detects if the user input is valid, when to begin the game, when a user has made a move, and when someone has won the game.`,
+    stack: ['HTML', 'Sass', 'JavaScript'],
+    codeURL: 'https://github.com/Dominik-Ilja/battleship',
+    sourceURL: 'https://battleship-ilja.netlify.app/',
   },
   {
-    image: videoChat,
-    imageAlt: 'Video Chat App',
-    title: 'WebRTC App',
-    description: `This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.`,
-    stack: ['React', 'WebRTC'],
-    codeURL: '#',
-    sourceURL: '#',
+    image: colorCards,
+    imageAlt: 'Color Cards',
+    title: 'Color Cards',
+    description: `Plugin used with the Figma design software. Required to be built with TypeScript and Figma's API. To be accepted I had to create artwork, icons, documentation, and general project details to be submitted along with the plugin. It was accepted within the first couple days and generated about 2,000 uses in the first week.`,
+    stack: ['TypeScript', 'Axios', 'Figma API'],
+    codeURL: 'https://github.com/Dominik-Ilja/Color-Cards',
+    sourceURL: 'https://www.figma.com/community/plugin/1127675179361433108/Color-Cards',
   },
 ];
 
