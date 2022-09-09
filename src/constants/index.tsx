@@ -77,10 +77,4 @@ export const technologies = [
   { title: 'Front End', icon: <React />, stack: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'] },
   { title: 'Back End', icon: <Database />, stack: ['Nodejs', 'Express', 'MongoDB', 'MySQL'] },
   { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
-  // { title: 'Workflow', icon: <Palette />, stack: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'] }
 ];
-// export const technologies = {
-//   frontend: ['HTML', 'CSS', 'JavaScript', 'Sass', 'Tailwind', 'TypeScript', 'React'],
-//   backend: ['Nodejs', 'Express', 'MongoDB', 'MySQL'],
-//   workflow: ['Figma', 'Git', 'GitHub', 'Netlify', 'Heroku', 'Illustrator', 'Mocha', 'Chai'],
-// };
