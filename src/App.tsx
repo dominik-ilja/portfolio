@@ -1,6 +1,6 @@
 import { Container, Logo, Nav, ProjectCard, Section, SectionTitle, StatCard, SubTitle, Text, ChevronUp } from "./components";
 import { links, projects, githubStats, technologies } from "./constants";
-
+import resume from './assets/resume.pdf';
 
 const App = () => {
 
@@ -75,7 +75,10 @@ const App = () => {
             <Text>
               I love creating beautiful things and bringing visions to life.
             </Text>
-            <button className="px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-light transition-colors max-w-fit">View Resume</button>
+            <a className="px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-light transition-colors max-w-fit"
+              href={resume} download={true}>
+              Download Resume
+            </a>
           </Container>
         </section>
 
