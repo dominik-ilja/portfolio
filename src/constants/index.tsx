@@ -67,10 +67,10 @@ export const projects: Project[] = [
 
 export const githubStats = {
   stars: 9,
-  commits: 260,
-  prs: 39,
-  issues: 28,
-  contributed: 2
+  commits: 569,
+  prs: 43,
+  issues: 27,
+  contributed: 9
 };
 
 export const technologies = [
