@@ -1,7 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
+import ProjectCard from "../components/Cards/ProjectCard/ProjectCard";
 import Layout from "../components/Layout/Layout";
+import Button from "../components/Utilities/Button/Button";
+import SectionTitle from "../components/Utilities/SectionTitle/SectionTitle";
 import arrows from "../public/arrows.svg";
+import moon from "../public/moon.svg";
 
 export default function Home() {
   return (
@@ -13,25 +17,57 @@ export default function Home() {
       </Head>
       <Layout>
         {/* Showcase */}
+        <section className="pb-16 -mt-16">
+          <div className="container flex flex-col px-3 mx-auto gap-y-9">
+            <div className="text-right max-w-[225px] ml-auto text-base-50 flex flex-col items-end">
+              Creating beauty and bringing visions to life.
+              <div className="flex flex-col items-center mr-8">
+                <div className="w-[2px] h-8 bg-base-10"></div>
+                <Image src={moon} alt="moon" className="w-6" />
+              </div>
+            </div>
+            <h1 className="text-5xl text-center text-white">Dominik Ilja</h1>
+            <p className="text-center text-base-50">
+              I&apos;m probably not the typical designer positioned behind an
+              Illustrator artboard adjusting pixels, but I design. Immersed in
+              stylesheets tweaking font sizes and contemplating layouts is where
+              you&apos;ll find me (~_^). I&apos;m committed to creating fluent
+              user experiences while staying fashionable.
+            </p>
+            <Button className="self-center bg-indigo">Current Project</Button>
+          </div>
+        </section>
+
         {/* Projects */}
+        <section className="py-16">
+          <div className="container flex flex-col px-3 mx-auto gap-y-9">
+            <SectionTitle title="Projects" />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <Button className="self-center bg-red">View All Projects</Button>
+          </div>
+        </section>
+
         {/* About */}
+        <section className="py-16">
+          <div className="container flex flex-col px-3 mx-auto gap-y-9">
+            <SectionTitle title="About" />
+          </div>
+        </section>
         {/* GitHub stats */}
         {/* Technologies */}
         {/* Contact */}
-        <section className="pb-9">
+        <section className="pt-16 pb-4">
           <div className="container flex flex-col px-3 mx-auto gap-y-9">
-            <div className="flex flex-col items-center gap-y-4">
-              <h1 className="text-4xl text-base-80">Contact</h1>
-              <div className="w-14 h-[2px] bg-base-20"></div>
-            </div>
+            <SectionTitle title="Contact" />
             <p className="text-center text-base-50">
               I&apos;m currently open to new opportunities, My inbox is open. If
               you have a question or just want to say hi, I&apos;ll try my best
               to get back to you!
             </p>
-            <button className="self-center px-5 py-3 text-white transition-opacity rounded-md bg-green hover:opacity-80">
-              Say Hello
-            </button>
+            <Button className="self-center bg-green">Say Hello</Button>
             <p className="text-center text-base-50">
               If email isn&apos;t your style you can add or follow me on my
               socials below!

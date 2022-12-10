@@ -18,7 +18,8 @@ module.exports = {
       black: "var(--color-black)",
       white: "var(--color-white)",
       base: {
-        1: "var(--color-base-00)",
+        1: "var(--color-base-01)",
+        5: "var(--color-base-05)",
         10: "var(--color-base-10)",
         20: "var(--color-base-20)",
         30: "var(--color-base-30)",

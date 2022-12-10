@@ -5,7 +5,8 @@
 :root {
   /* Dark to light */
   --color-black: #000000;
-  --color-base-00: #171717;
+  --color-base-01: hsl(0, 0%, 6%);
+  --color-base-05: hsl(0, 0%, 9%);
   --color-base-10: #212121;
   --color-base-20: #383838;
   --color-base-30: #454545;
