@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark to light */
+  --color-black: #000000;
+  --color-base-00: #171717;
+  --color-base-10: #212121;
+  --color-base-20: #383838;
+  --color-base-30: #454545;
+  --color-base-40: #5e5e5e;
+  --color-base-50: #a9a7a7;
+  --color-base-60: #b5b5b5;
+  --color-base-70: #c3c1c1;
+  --color-base-80: #d9d9d9;
+  --color-base-90: #e8e8e8;
+  --color-base-100: #f5f5f5;
+  --color-white: #ffffff;
+
+  --color-yellow: hsl(43, 100%, 61%);
+  --color-green: hsl(126, 34%, 48%);
+  --color-cyan: hsl(193, 95%, 68%);
+  --color-cyan-faded: hsl(193, 62%, 30%);
+  --color-blue: hsl(209, 97%, 60%);
+  --color-indigo: hsl(229, 100%, 67%);
+  --color-indigo-muted: hsl(230, 16%, 44%);
+  --color-purple: hsl(266, 83%, 46%);
+  --color-purple-faded: hsl(266, 46%, 37%);
+  --color-pink: hsl(328, 94%, 55%);
+  --color-pink-faded: hsl(328, 64%, 35%);
+  --color-red: hsl(335, 100%, 54%);
+  --color-red-faded: hsl(335, 56%, 17%);
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-base-70);
+}
