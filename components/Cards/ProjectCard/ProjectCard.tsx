@@ -24,8 +24,8 @@ const TAG_CLASSES = {
     themeBGClass: "bg-blue",
   },
   new: {
-    themeTextClass: "text-yellow",
-    themeBGClass: "bg-yellow",
+    themeTextClass: "text-red",
+    themeBGClass: "bg-red",
   },
   plugin: {
     themeTextClass: "text-green",
@@ -102,7 +102,12 @@ const ProjectCard = (props: Props) => {
             />
           ))}
         </div>
-        <Button className={`${themeBGClass || "bg-base-30"}`}>See More</Button>
+        <Button
+          internalLink={`/projects/${props.project.id}`}
+          className={`${themeBGClass || "bg-base-30"} text-center`}
+        >
+          See More
+        </Button>
       </div>
     </article>
   );
