@@ -1,7 +1,12 @@
+import Link from "next/link";
+import { Url } from "url";
+
 type Props = {
   children?: string | number;
   className?: string;
   rounded?: boolean;
+  internalLink?: string;
+  externalLink?: string;
 };
 
 const Button = (props: Props) => {
@@ -14,7 +19,22 @@ const Button = (props: Props) => {
     className = `${className} rounded-md`;
   }
 
-  return <button className={className}>{props.children || "Text"}</button>;
+  if (props.internalLink !== undefined) {
+    return (
+      <Link href={props.internalLink} className={className}>
+        {props.children}
+      </Link>
+    );
+  }
+  if (props.externalLink !== undefined) {
+    return (
+      <a href={props.internalLink} className={className}>
+        {props.children}
+      </a>
+    );
+  }
+
+  return <button className={className}>{props.children}</button>;
 };
 
 export default Button;

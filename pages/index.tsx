@@ -9,6 +9,7 @@ import moon from "../public/moon.svg";
 import { projects, githubStats, technologies } from "../constants/projectData";
 import Underline from "../components/Utilities/Underline/Underline";
 import Tag from "../components/Utilities/Tag/Tag";
+import Link from "next/link";
 
 export default function Home() {
   const techClasses = [
@@ -65,7 +66,11 @@ export default function Home() {
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-            <Button rounded={true} className="self-center mt-16 bg-red">
+            <Button
+              rounded={true}
+              internalLink="/projects"
+              className="self-center mt-16 bg-red"
+            >
               View All Projects
             </Button>
           </div>
