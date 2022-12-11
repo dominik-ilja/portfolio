@@ -4,6 +4,7 @@ import icon_codepen from "../../public/icon_codepen.svg";
 import icon_linkedin from "../../public/icon_linkedin.svg";
 import icon_youtube from "../../public/icon_youtube.svg";
 import icon_twitter from "../../public/icon_twitter.svg";
+import logo_footer from "../../public/logo_footer.svg";
 
 const socials = [
   { src: icon_github, alt: "GitHub", href: "#" },
@@ -29,7 +30,10 @@ const Footer = () => {
             </li>
           ))}
         </menu>
-        <small className="text-base-30">Developed by Dominik Ilja</small>
+        <div className="flex items-end gap-x-2">
+          <small className="text-base-30">Developed by Dominik Ilja</small>
+          <Image src={logo_footer} alt="Logo" />
+        </div>
       </div>
     </footer>
   );
