@@ -8,15 +8,15 @@ const Projects = () => {
   return (
     <Layout>
       <div className="container px-3 mx-auto">
-        <div>
+        <div className="pb-16">
           <MainTitle underline={true} className="mb-12">
             Projects
           </MainTitle>
-          <Button rounded={true} className="block mx-auto mb-12 bg-base-10">
+          <Button rounded={true} className="block mx-auto bg-base-10">
             Filter Projects
           </Button>
         </div>
-        <ProjectCards />
+        <ProjectCards className="pb-16" />
       </div>
     </Layout>
   );

@@ -74,7 +74,7 @@ const ProjectCard = (props: Props) => {
   }
 
   return (
-    <article className="border border-base-40">
+    <article className="flex flex-col border border-base-40">
       <div className="flex flex-col items-center pb-4 gap-y-4">
         <div className="relative overflow-hidden">
           <CardTag tag={props.project.tag} themeBG={themeBGClass} />
@@ -91,7 +91,7 @@ const ProjectCard = (props: Props) => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col mt-auto gap-y-4">
         <div className="text-xl text-center text-white">Stack</div>
         <div className="flex pb-4 justify-evenly">
           {props.project.stack.map((name) => (
