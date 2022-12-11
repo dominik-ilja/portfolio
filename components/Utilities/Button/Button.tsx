@@ -27,7 +27,7 @@ const Button = (props: Props) => {
   }
   if (props.externalLink !== undefined) {
     return (
-      <a href={props.internalLink} className={className}>
+      <a href={props.externalLink} className={className}>
         {props.children}
       </a>
     );

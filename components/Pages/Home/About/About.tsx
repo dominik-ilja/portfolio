@@ -57,9 +57,12 @@ const About = () => {
                 key={tech.title}
                 className="flex flex-col items-center gap-y-4"
               >
-                <h3 className={`${techClasses[i].textClasses} text-xl`}>
-                  {tech.title}
-                </h3>
+                <div
+                  className={`${techClasses[i].textClasses} text-xl flex items-center gap-x-3`}
+                >
+                  <h3 className="whitespace-nowrap">{tech.title}</h3>
+                  <tech.icon className="h-6" />
+                </div>
                 <Underline className={techClasses[i].bgClasses} />
                 <div className="grid grid-cols-3 gap-3">
                   {tech.stack.map((item) => (

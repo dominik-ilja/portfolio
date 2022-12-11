@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "../../../Utilities/Button/Button";
 import moon from "../../../../public/moon.svg";
+import { projects } from "../../../../constants/projectData";
 
 const Showcase = () => {
   return (
@@ -21,7 +22,11 @@ const Showcase = () => {
           you&apos;ll find me (~_^). I&apos;m committed to creating fluent user
           experiences while staying fashionable.
         </p>
-        <Button rounded={true} className="self-center bg-indigo">
+        <Button
+          internalLink={`projects/${projects[0].id}`}
+          rounded={true}
+          className="self-center bg-indigo"
+        >
           Current Project
         </Button>
       </div>

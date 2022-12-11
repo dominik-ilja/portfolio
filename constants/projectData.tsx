@@ -2,6 +2,7 @@ import time_tracker from "../public/time_tracker.png";
 import poke_finder from "../public/poke_finder.png";
 import battleship from "../public/battleship.png";
 import color_cards from "../public/color_cards.png";
+import ICONS from "../components/Utilities/Icons";
 
 export const links = {
   home: "#home",
@@ -66,7 +67,7 @@ export const githubStats = [
 
 export const technologies = [
   {
-    icon: "<React />",
+    icon: ICONS.React,
     stack: [
       "HTML",
       "CSS",
@@ -79,13 +80,12 @@ export const technologies = [
     title: "Front End",
   },
   {
-    icon: "<Database />",
-
+    icon: ICONS.Database,
     stack: ["Nodejs", "Express", "MongoDB", "MySQL"],
     title: "Back End",
   },
   {
-    icon: "<Palette />",
+    icon: ICONS.Palette,
     stack: [
       "Figma",
       "Git",

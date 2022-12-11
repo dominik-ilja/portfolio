@@ -13,7 +13,11 @@ const Contact = () => {
           have a question or just want to say hi, I&apos;ll try my best to get
           back to you!
         </p>
-        <Button rounded={true} className="self-center bg-green">
+        <Button
+          externalLink="mailto:dominik.ilja.work@gmail.com"
+          rounded={true}
+          className="self-center bg-green"
+        >
           Say Hello
         </Button>
         <p className="text-center text-base-50">
