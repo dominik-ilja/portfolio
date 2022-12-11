@@ -6,8 +6,26 @@ import Button from "../components/Utilities/Button/Button";
 import SectionTitle from "../components/Utilities/SectionTitle/SectionTitle";
 import arrows from "../public/arrows.svg";
 import moon from "../public/moon.svg";
+import { projects, githubStats, technologies } from "../constants/projectData";
+import Underline from "../components/Utilities/Underline/Underline";
+import Tag from "../components/Utilities/Tag/Tag";
 
 export default function Home() {
+  const techClasses = [
+    {
+      textClasses: "transition-colors text-cyan-faded hover:text-cyan",
+      bgClasses: "transition-colors bg-cyan-faded hover:bg-cyan",
+    },
+    {
+      textClasses: "transition-colors text-purple-faded hover:text-purple",
+      bgClasses: "transition-colors bg-purple-faded hover:text-purple",
+    },
+    {
+      textClasses: "transition-colors text-pink-faded hover:text-pink",
+      bgClasses: "transition-colors bg-pink-faded hover:bg-pink",
+    },
+  ];
+
   return (
     <div>
       <Head>
@@ -34,19 +52,22 @@ export default function Home() {
               you&apos;ll find me (~_^). I&apos;m committed to creating fluent
               user experiences while staying fashionable.
             </p>
-            <Button className="self-center bg-indigo">Current Project</Button>
+            <Button rounded={true} className="self-center bg-indigo">
+              Current Project
+            </Button>
           </div>
         </section>
 
         {/* Projects */}
         <section className="py-16">
-          <div className="container flex flex-col px-3 mx-auto gap-y-9">
+          <div className="container flex flex-col px-3 mx-auto gap-y-16">
             <SectionTitle title="Projects" />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <Button className="self-center bg-red">View All Projects</Button>
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+            <Button rounded={true} className="self-center mt-16 bg-red">
+              View All Projects
+            </Button>
           </div>
         </section>
 
@@ -54,10 +75,60 @@ export default function Home() {
         <section className="py-16">
           <div className="container flex flex-col px-3 mx-auto gap-y-9">
             <SectionTitle title="About" />
+            <p className="text-center text-base-50">
+              I began my journey by building a website with Wordpress to host my
+              guitar lessons. I then moved to the big three: HTML, CSS, and
+              JavaScript. I then moved to building websites and web applications
+              with these technologies. I&apos;ve fallen in love with learning
+              all the details of computers, design, and software development.
+              I&apos;m currently contributing to Figma, open source projects
+              through GitHub, and looking to build desktop applications with
+              Electron.
+            </p>
+            {/* GitHub stats */}
+            <div>
+              <h2 className="mb-6 text-xl text-center text-base-40">
+                GitHub Stats
+              </h2>
+              <div className="grid grid-cols-1 gap-y-3">
+                {githubStats.map(({ stat, value }) => (
+                  <div key={stat} className="p-3 text-center bg-base-10">
+                    <div className="mb-1 text-base-50">{stat}</div>
+                    <div className="text-xl text-white">{value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Technologies */}
+            <div>
+              <h2 className="mb-6 text-xl text-center text-base-40">
+                Technologies
+              </h2>
+              <div className="grid grid-cols-1 gap-y-8">
+                {technologies.map((tech, i) => (
+                  <div
+                    key={tech.title}
+                    className="flex flex-col items-center gap-y-4"
+                  >
+                    <h3 className={`${techClasses[i].textClasses} text-xl`}>
+                      {tech.title}
+                    </h3>
+                    <Underline className={techClasses[i].bgClasses} />
+                    <div className="grid grid-cols-3 gap-3">
+                      {tech.stack.map((item) => (
+                        <Tag
+                          key={item}
+                          text={item}
+                          className={techClasses[i].textClasses}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
-        {/* GitHub stats */}
-        {/* Technologies */}
         {/* Contact */}
         <section className="pt-16 pb-4">
           <div className="container flex flex-col px-3 mx-auto gap-y-9">
@@ -67,7 +138,9 @@ export default function Home() {
               you have a question or just want to say hi, I&apos;ll try my best
               to get back to you!
             </p>
-            <Button className="self-center bg-green">Say Hello</Button>
+            <Button rounded={true} className="self-center bg-green">
+              Say Hello
+            </Button>
             <p className="text-center text-base-50">
               If email isn&apos;t your style you can add or follow me on my
               socials below!

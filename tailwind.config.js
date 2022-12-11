@@ -50,7 +50,7 @@ module.exports = {
       },
       purple: {
         DEFAULT: "var(--color-purple)",
-        faded: "var(--color-faded)",
+        faded: "var(--color-purple-faded)",
       },
       pink: {
         DEFAULT: "var(--color-pink)",
