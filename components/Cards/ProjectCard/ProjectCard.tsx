@@ -1,18 +1,10 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Underline from "../../Utilities/Underline/Underline";
 import Tag from "../../Utilities/Tag/Tag";
 import Button from "../../Utilities/Button/Button";
 
 type Props = {
-  project: {
-    alt: string;
-    description: string;
-    id: string;
-    image: StaticImageData;
-    stack: string[];
-    tag: string;
-    title: string;
-  };
+  project: Project;
 };
 const TAG_CLASSES = {
   design: {
@@ -75,12 +67,15 @@ const ProjectCard = (props: Props) => {
 
   return (
     <article className="flex flex-col border border-base-40">
+      {/* Card Top */}
       <div className="flex flex-col items-center pb-4 gap-y-4">
+        {/* Card Image */}
         <div className="relative overflow-hidden">
           <CardTag tag={props.project.tag} themeBG={themeBGClass} />
           <Overlay themeBG={themeBGClass} />
           <Image src={props.project.image} alt={props.project.alt} />
         </div>
+        {/* Card Content */}
         <div className="flex flex-col items-center px-2 gap-y-4">
           <div className="text-2xl text-center text-white">
             {props.project.title}
@@ -91,8 +86,10 @@ const ProjectCard = (props: Props) => {
           </p>
         </div>
       </div>
+      {/* Card Bottom */}
       <div className="flex flex-col mt-auto gap-y-4">
         <div className="text-xl text-center text-white">Stack</div>
+        {/* Card Stack */}
         <div className="flex pb-4 justify-evenly">
           {props.project.stack.map((name) => (
             <Tag

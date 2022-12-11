@@ -14,7 +14,7 @@ export const links = {
   email: "mailto:dominik.ilja.developer@gmail.com",
 };
 
-export const projects = [
+export const projects: Project[] = [
   {
     image: time_tracker,
     alt: "Time Tracker",

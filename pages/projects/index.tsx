@@ -1,10 +1,14 @@
+import { useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import Button from "../../components/Utilities/Button/Button";
 import MainTitle from "../../components/Utilities/MainTitle/MainTitle";
-import ProjectsSection from "../../components/Pages/Home/Projects/Projects";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
+import { projects as PROJECT_DATA } from "../../constants/projectData";
 
 const Projects = () => {
+  const [filter, setFilter] = useState("");
+  const [showFilter, setShowFilter] = useState(false);
+
   return (
     <Layout>
       <div className="container px-3 mx-auto">
@@ -16,7 +20,7 @@ const Projects = () => {
             Filter Projects
           </Button>
         </div>
-        <ProjectCards className="pb-16" />
+        <ProjectCards projects={PROJECT_DATA} className="pb-16" />
       </div>
     </Layout>
   );
