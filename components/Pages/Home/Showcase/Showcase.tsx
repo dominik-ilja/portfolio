@@ -2,6 +2,7 @@ import Image from "next/image";
 import Button from "../../../Utilities/Button/Button";
 import moon from "../../../../public/moon.svg";
 import { projects } from "../../../../constants/projectData";
+import MainTitle from "../../../Utilities/MainTitle/MainTitle";
 
 const Showcase = () => {
   return (
@@ -14,7 +15,7 @@ const Showcase = () => {
             <Image src={moon} alt="moon" className="w-6" />
           </div>
         </div>
-        <h1 className="text-5xl text-center text-white">Dominik Ilja</h1>
+        <MainTitle underline={true}>Dominik Ilja</MainTitle>
         <p className="text-center text-base-50">
           I&apos;m probably not the typical designer positioned behind an
           Illustrator artboard adjusting pixels, but I design. Immersed in

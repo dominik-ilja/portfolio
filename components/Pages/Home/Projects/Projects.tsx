@@ -1,16 +1,13 @@
-import { projects as PROJECTS_DATA } from "../../../../constants/projectData";
 import Button from "../../../Utilities/Button/Button";
-import ProjectCard from "../../../Cards/ProjectCard/ProjectCard";
 import SectionTitle from "../../../Utilities/SectionTitle/SectionTitle";
+import ProjectCards from "../../../ProjectCards/ProjectCards";
 
 const Projects = () => {
   return (
     <section className="py-16">
       <div className="container flex flex-col px-3 mx-auto gap-y-16">
         <SectionTitle title="Projects" />
-        {PROJECTS_DATA.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        <ProjectCards />
         <Button
           rounded={true}
           internalLink="/projects"

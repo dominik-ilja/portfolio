@@ -7,13 +7,11 @@ module.exports = {
   // darkMode: "class",
   safelist: [],
   theme: {
-    // extend: {
-    //   backgroundImage: {
-    //     "intro-mobile": "url('/src/assets/bg-mobile.svg')",
-    //     "intro-tablet": "url('/src/assets/bg-tablet.svg')",
-    //     "intro-desktop": "url('/src/assets/bg-desktop.svg')",
-    //     "about-rings": "url('/src/assets/rings.svg')",
-    //   },
+    extend: {
+      gridTemplateColumns: {
+        responsive: "repeat(auto-fit, minmax(17.5rem, 1fr))",
+      },
+    },
     colors: {
       black: "var(--color-black)",
       white: "var(--color-white)",
