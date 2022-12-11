@@ -2,6 +2,7 @@ import Image from "next/image";
 import Underline from "../../Utilities/Underline/Underline";
 import Tag from "../../Utilities/Tag/Tag";
 import Button from "../../Utilities/Button/Button";
+import { capitalize } from "../../../utilities/utilities";
 
 type Props = {
   project: Project;
@@ -46,19 +47,13 @@ const Overlay = (props: { themeBG?: string }) => {
   );
 };
 const CardTag = (props: { tag: string; themeBG?: string }) => {
-  let tag = "";
-
-  if (props.tag !== "") {
-    tag = props.tag[0].toUpperCase() + props.tag.slice(1).toLowerCase();
-  }
-
   return (
     <div
       className={`absolute z-20 text-white min-w-[100px] p-2 font-bold text-center ${
         props.themeBG || "bg-base-30"
       }`}
     >
-      {tag}
+      {capitalize(props.tag)}
     </div>
   );
 };
