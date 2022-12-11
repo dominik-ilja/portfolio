@@ -12,4 +12,6 @@ declare global {
     tag: string;
     title: string;
   };
+
+  type TagOptions = "design" | "game" | "plugin" | "new" | "web";
 }

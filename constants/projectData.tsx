@@ -14,7 +14,7 @@ export const links = {
   email: "mailto:dominik.ilja.developer@gmail.com",
 };
 
-export const projects: Project[] = [
+export const PROJECTS: Project[] = [
   {
     image: time_tracker,
     alt: "Time Tracker",
@@ -98,4 +98,12 @@ export const technologies = [
     ],
     title: "Workflow",
   },
+];
+
+export const PROJECT_TAGS: TagOptions[] = [
+  "design",
+  "game",
+  "plugin",
+  "new",
+  "web",
 ];

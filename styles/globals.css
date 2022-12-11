@@ -4,11 +4,11 @@
 
 :root {
   /* Dark to light */
-  --color-black: #000000;
-  --color-base-01: hsl(0, 0%, 6%);
-  --color-base-05: hsl(0, 0%, 9%);
-  --color-base-10: #212121;
-  --color-base-20: #383838;
+  --color-black: rgb(0, 0, 0);
+  --color-base-01: 15 15 15;
+  --color-base-05: rgb(23, 23, 23);
+  --color-base-10: rgb(33, 33, 33);
+  --color-base-20: rgb(56, 56, 56);
   --color-base-30: #454545;
   --color-base-40: #5e5e5e;
   --color-base-50: #a9a7a7;

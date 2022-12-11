@@ -6,7 +6,15 @@ import Button from "../../Utilities/Button/Button";
 type Props = {
   project: Project;
 };
-const TAG_CLASSES = {
+type CSSClasses = {
+  themeTextClass: string;
+  themeBGClass: string;
+};
+type TagClasses = {
+  [key in TagOptions]: CSSClasses;
+};
+
+const TAG_CLASSES: TagClasses = {
   design: {
     themeTextClass: "text-blue",
     themeBGClass: "bg-blue",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MouseEventHandler } from "react";
 
 type Props = {
   children?: string | number;
@@ -6,6 +7,7 @@ type Props = {
   rounded?: boolean;
   internalLink?: string;
   externalLink?: string;
+  onClick?: MouseEventHandler;
 };
 
 const Button = (props: Props) => {
@@ -20,20 +22,32 @@ const Button = (props: Props) => {
 
   if (props.internalLink !== undefined) {
     return (
-      <Link href={props.internalLink} className={className}>
+      <Link
+        onClick={props.onClick}
+        href={props.internalLink}
+        className={className}
+      >
         {props.children}
       </Link>
     );
   }
   if (props.externalLink !== undefined) {
     return (
-      <a href={props.externalLink} className={className}>
+      <a
+        onClick={props.onClick}
+        href={props.externalLink}
+        className={className}
+      >
         {props.children}
       </a>
     );
   }
 
-  return <button className={className}>{props.children}</button>;
+  return (
+    <button onClick={props.onClick} className={className}>
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

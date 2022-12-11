@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../../../Utilities/Button/Button";
 import moon from "../../../../public/moon.svg";
-import { projects } from "../../../../constants/projectData";
+import { PROJECTS } from "../../../../constants/projectData";
 import MainTitle from "../../../Utilities/MainTitle/MainTitle";
 
 const Showcase = () => {
@@ -24,7 +24,7 @@ const Showcase = () => {
           experiences while staying fashionable.
         </p>
         <Button
-          internalLink={`projects/${projects[0].id}`}
+          internalLink={`projects/${PROJECTS[0].id}`}
           rounded={true}
           className="self-center bg-indigo"
         >
