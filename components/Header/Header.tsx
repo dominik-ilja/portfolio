@@ -10,7 +10,11 @@ const Header = () => {
   return (
     <header>
       <div className="container flex items-start justify-between px-3 mx-auto">
-        <Image src={logo} alt="Ghost" className="max-w-[120px]" />
+        <Image
+          src={logo}
+          alt="Ghost"
+          className="max-w-[120px] md:max-w-[200px] lg:max-w-[250px] relative left-4"
+        />
         <HeaderToggle
           onClick={() => setMenuIsOpen(!menuIsOpen)}
           open={menuIsOpen}
