@@ -57,12 +57,19 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const githubStats = [
+export const githubStats: StatObject[] = [
   { stat: "Total Stars Earned:", value: 11 },
   { stat: "Total Commits (2022):", value: 639 },
   { stat: "Total PRs:", value: 45 },
   { stat: "Total Issues:", value: 27 },
   { stat: "Contributed To:", value: 9 },
+];
+
+export const FIGMA_STATS: StatObject[] = [
+  { stat: "Total Views:", value: 2029 },
+  { stat: "Total Uses:", value: 8090 },
+  { stat: "Likes", value: 49 },
+  { stat: "Comments", value: 3 },
 ];
 
 export const technologies = [

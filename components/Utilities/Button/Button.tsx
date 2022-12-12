@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MouseEventHandler } from "react";
 
 type Props = {
-  children?: string | number;
+  children?: React.ReactNode;
   className?: string;
   rounded?: boolean;
   internalLink?: string;

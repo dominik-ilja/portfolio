@@ -7,7 +7,7 @@ type Props = {
 
 const ProjectCards = (props: Props) => {
   return (
-    <div className={`grid gap-8 grid-cols-responsive ${props.className || ""}`}>
+    <div className={`grid gap-8 grid-cols-resp-fill ${props.className || ""}`}>
       {props.projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}

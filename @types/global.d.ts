@@ -14,4 +14,9 @@ declare global {
   };
 
   type TagOptions = "design" | "game" | "plugin" | "new" | "web";
+
+  type StatObject = {
+    stat: string;
+    value: number;
+  };
 }
