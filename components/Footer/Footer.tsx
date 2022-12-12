@@ -16,7 +16,7 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="py-4">
+    <footer className="py-4 mt-auto">
       <div className="container flex flex-col items-center justify-center mx-auto gap-y-3">
         <menu className="flex gap-x-5">
           {socials.map((social) => (

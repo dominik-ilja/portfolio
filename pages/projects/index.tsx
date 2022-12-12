@@ -10,13 +10,14 @@ const Projects = () => {
   const [projectList, setProjectList] = useState(PROJECTS);
   const [showFilter, setShowFilter] = useState(false);
   const [tag, setTag] = useState<string>("any");
-  const [tech, setTech] = useState<string | null>(null);
+  const [tech, setTech] = useState<string>("any");
 
   useEffect(() => {
     setProjectList(
       PROJECTS.filter((project) => {
-        const tagFilter = tag === "any" || project.tag === tag;
-        const techFilter = tech === null || project.stack.includes(tech);
+        const tagFilter = tag.toLowerCase() === "any" || project.tag === tag;
+        const techFilter =
+          tech.toLowerCase() === "any" || project.stack.includes(tech);
 
         return tagFilter && techFilter;
       })
@@ -43,9 +44,8 @@ const Projects = () => {
               onExitClick={() => setShowFilter(false)}
               setTag={setTag}
               tag={tag}
-              // setTech={setTech}
-              // onTagSelection={selectionHandler(setTag)}
-              // onTechSelection={selectionHandler(setTech)}
+              setTech={setTech}
+              tech={tech}
             />
           )}
         </div>

@@ -81,7 +81,7 @@ export const technologies = [
   },
   {
     icon: ICONS.Database,
-    stack: ["Nodejs", "Express", "MongoDB", "MySQL"],
+    stack: ["Node", "Express", "MongoDB", "MySQL"],
     title: "Back End",
   },
   {
@@ -106,4 +106,26 @@ export const PROJECT_TAGS: TagOptions[] = [
   "plugin",
   "new",
   "web",
+];
+
+export const PROJECT_TECHNOLOGIES = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Sass",
+  "Tailwind",
+  "TypeScript",
+  "React",
+  "Node",
+  "Express",
+  "MongoDB",
+  "MySQL",
+  "Figma",
+  "Git",
+  "GitHub",
+  "Netlify",
+  "Heroku",
+  "Illustrator",
+  "Mocha",
+  "Chai",
 ];

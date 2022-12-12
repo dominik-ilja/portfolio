@@ -1,18 +1,20 @@
 import { Dispatch, MouseEventHandler, useRef, useState } from "react";
-import { PROJECT_TAGS } from "../../../../../constants/projectData";
-import { capitalize } from "../../../../../utilities/utilities";
+import {
+  PROJECT_TAGS,
+  PROJECT_TECHNOLOGIES,
+} from "../../../../../constants/projectData";
 import Button from "../../../../Utilities/Button/Button";
-import Chevron from "../../../../Utilities/Icons/Chevron/Chevron";
+import FilterDropdown from "./FilterDropdown/FilterDropdown";
 
 type Props = {
   onExitClick?: MouseEventHandler;
   setTag: Dispatch<string>;
-  tag: string | null;
-  // setTech: Dispatch<string | null>;
+  tag: string;
+  setTech: Dispatch<string>;
+  tech: string;
 };
 
 const FilterMenu = (props: Props) => {
-  const [show, setShow] = useState(false);
   const backgroundRef = useRef(null);
 
   function backgroundExitClickHandler(e: React.MouseEvent) {
@@ -20,7 +22,6 @@ const FilterMenu = (props: Props) => {
       props.onExitClick(e);
     }
   }
-  function dropdownClickHandler() {}
 
   return (
     <div
@@ -38,53 +39,27 @@ const FilterMenu = (props: Props) => {
         <div className="grid items-center grid-cols-[auto_auto_1fr] gap-y-4">
           <div className="text-base-50">Category</div>
           <div className="px-4 text-base-30">is</div>
-          <div className="relative">
-            <button
-              className="flex items-center justify-between w-full p-2 border text-base-30 border-base-30"
-              onClick={() => setShow(!show)}
-            >
-              {props.tag ? capitalize(props.tag) : "Any"}
-              <Chevron />
-            </button>
-            <ul
-              className={`${
-                show ? "" : "hidden"
-              } border border-base-30 absolute left-0 top-full bg-black right-0 z-10`}
-            >
-              {["any", ...PROJECT_TAGS].map((tag) => (
-                <li
-                  key={tag}
-                  className="border-b border-base-30 last:border-b-0"
-                >
-                  <button
-                    onClick={() => props.setTag(tag)}
-                    className="w-full py-2 text-center"
-                  >
-                    {capitalize(tag)}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FilterDropdown
+            selectedItem={props.tag}
+            setItem={props.setTag}
+            items={["any", ...PROJECT_TAGS]}
+            capitalize={true}
+          />
           <div className="text-base-50">Project</div>
           <div className="px-4 text-base-30">uses</div>
-          <button className="flex items-center justify-between p-2 border text-base-30 border-base-30 ">
-            React
-            <Chevron />
-          </button>
+          <FilterDropdown
+            selectedItem={props.tech}
+            setItem={props.setTech}
+            items={["Any", ...PROJECT_TECHNOLOGIES]}
+          />
         </div>
-        <div className="flex gap-x-4">
-          <Button rounded={true} className="w-full bg-indigo">
-            Confirm
-          </Button>
-          <Button
-            onClick={props.onExitClick}
-            rounded={true}
-            className="w-full bg-red bg-"
-          >
-            Cancel
-          </Button>
-        </div>
+        <Button
+          onClick={props.onExitClick}
+          rounded={true}
+          className="w-full bg-indigo"
+        >
+          Finished
+        </Button>
       </div>
     </div>
   );
