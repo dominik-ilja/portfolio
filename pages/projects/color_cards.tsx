@@ -6,18 +6,18 @@ import TechnologyGrid from "../../components/TechnologyGrid/TechnologyGrid";
 import Code from "../../components/Utilities/Code/Code";
 import Bold from "../../components/Utilities/Bold/Bold";
 import Link from "../../components/Utilities/Link/Link";
-import image_thumbnail from "../../public/color_cards/thumbnail.png";
-import image_setup_plugin from "../../public/color_cards/setup_plugin.png";
-import image_ui from "../../public/color_cards/ui.png";
-import image_color_api from "../../public/color_cards/color_api.png";
-import image_cards from "../../public/color_cards/cards.png";
-import image_application from "../../public/color_cards/application.gif";
+import image_thumbnail from "../../public/projects/color_cards/thumbnail.png";
+import image_setup_plugin from "../../public/projects/color_cards/setup_plugin.png";
+import image_ui from "../../public/projects/color_cards/ui.png";
+import image_color_api from "../../public/projects/color_cards/color_api.png";
+import image_cards from "../../public/projects/color_cards/cards.png";
+import image_application from "../../public/projects/color_cards/application.gif";
 import { FIGMA_STATS } from "../../constants/projectData";
 import StatCard from "../../components/Cards/StatCard/StatCard";
 import Text from "../../components/Utilities/Text/Text";
-import Section from "../../components/Utilities/Section/Section";
 import ProjectIntro from "../../components/ProjectIntro/ProjectIntro";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
+import ProjectContainer from "../../components/ProjectContainer/ProjectContainer";
 
 const ColorCards = () => {
   const technologies = [
@@ -35,10 +35,10 @@ const ColorCards = () => {
 
   return (
     <Layout>
-      <Container className="flex flex-col pb-16 gap-y-9">
+      <Container>
         <ProjectIntro
           title="Color Cards"
-          src={image_thumbnail}
+          thumbnail={image_thumbnail}
           codeLink="https://github.com/Dominik-Ilja/Color-Cards"
           viewLink="https://www.figma.com/community/plugin/1127675179361433108"
         >
@@ -52,8 +52,7 @@ const ColorCards = () => {
             is a good indicator it&apos;s time to automate!
           </Text>
         </ProjectIntro>
-
-        <div className="w-full max-w-2xl mx-auto">
+        <ProjectContainer>
           <ProjectSection>
             <SectionTitle>Stats</SectionTitle>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -80,11 +79,7 @@ const ColorCards = () => {
               given a couple of options for templates. We went with option three
               since it seemed to cover what we needed the most.
             </Text>
-            <Image
-              src={image_setup_plugin}
-              alt="plugin choices"
-              className="w-full max-w-2xl mx-auto"
-            />
+            <Image src={image_setup_plugin} alt="plugin choices" />
             <Text>
               With the project files created, what I needed to figure out was
               how to run the plugin. I learned that when you create your plugin
@@ -110,11 +105,7 @@ const ColorCards = () => {
           <ProjectSection>
             <SectionTitle title="User Interface" />
             <Text>Our result so far was:</Text>
-            <Image
-              src={image_ui}
-              alt="plugin ui"
-              className="w-full max-w-2xl mx-auto"
-            />
+            <Image src={image_ui} alt="plugin ui" />
             <Text>
               I created event listeners to keep the value controlled within
               JavaScript. Other listeners were attached to the{" "}
@@ -122,11 +113,7 @@ const ColorCards = () => {
               user clicked on one of these buttons it would send a message to
               the API. Either closing the plugin or creating the card.
             </Text>
-            <Image
-              src={image_color_api}
-              alt="color api homepage"
-              className="w-full max-w-2xl mx-auto"
-            />
+            <Image src={image_color_api} alt="color api homepage" />
             <Text>
               Another option given was to use the <Bold>Color API</Bold>. If
               this is checked the generated card will have a name that is pulled
@@ -139,11 +126,7 @@ const ColorCards = () => {
               With the UI finished we can now focus on generating cards like
               these:
             </Text>
-            <Image
-              src={image_cards}
-              alt="color cards example"
-              className="w-full max-w-2xl mx-auto"
-            />
+            <Image src={image_cards} alt="color cards example" />
           </ProjectSection>
 
           <ProjectSection>
@@ -223,7 +206,7 @@ const ColorCards = () => {
               user to place cards into a group.
             </Text>
           </ProjectSection>
-        </div>
+        </ProjectContainer>
       </Container>
     </Layout>
   );

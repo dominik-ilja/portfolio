@@ -1,7 +1,7 @@
-import time_tracker from "../public/time_tracker.png";
-import poke_finder from "../public/poke_finder.png";
-import battleship from "../public/battleship.png";
-import color_cards from "../public/color_cards.png";
+import time_tracker from "../public/projects/time_tracker/thumbnail.png";
+import poke_finder from "../public/projects/poke_finder/thumbnail.png";
+import battleship from "../public/projects/battleship/thumbnail.png";
+import color_cards from "../public/projects/color_cards/thumbnail.png";
 import ICONS from "../components/Utilities/Icons";
 
 export const links = {

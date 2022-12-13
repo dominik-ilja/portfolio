@@ -1,10 +1,10 @@
 import Image from "next/image";
-import icon_github from "../../public/icon_github.svg";
-import icon_codepen from "../../public/icon_codepen.svg";
-import icon_linkedin from "../../public/icon_linkedin.svg";
-import icon_youtube from "../../public/icon_youtube.svg";
-import icon_twitter from "../../public/icon_twitter.svg";
-import logo_footer from "../../public/logo_footer.svg";
+import icon_github from "../../public/icons/icon_github.svg";
+import icon_codepen from "../../public/icons/icon_codepen.svg";
+import icon_linkedin from "../../public/icons/icon_linkedin.svg";
+import icon_youtube from "../../public/icons/icon_youtube.svg";
+import icon_twitter from "../../public/icons/icon_twitter.svg";
+import logo_footer from "../../public/icons/logo_footer.svg";
 
 const socials = [
   { src: icon_github, alt: "GitHub", href: "#" },

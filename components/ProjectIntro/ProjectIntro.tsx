@@ -7,7 +7,7 @@ import CodeIcon from "../Utilities/Icons/Code/Code";
 
 type Props = {
   children: React.ReactNode;
-  src: string | StaticImageData;
+  thumbnail: string | StaticImageData;
   codeLink: string;
   viewLink: string;
   title: string;
@@ -24,7 +24,7 @@ const ProjectIntro = (props: Props) => {
       </div>
       <div className="flex flex-col flex-shrink-0 gap-y-3 gap-x-10 md:flex-row lg:flex-col">
         <Image
-          src={props.src}
+          src={props.thumbnail}
           alt="Project display"
           className="w-full mx-auto mb-5"
         />
