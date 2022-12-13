@@ -12,7 +12,7 @@ const Contact = () => {
     <Section className="pb-4">
       <Container className="flex flex-col gap-y-9">
         <SectionTitle title="Contact" />
-        <Text className="max-w-lg mx-auto">
+        <Text className="max-w-xl mx-auto">
           I&apos;m currently open to new opportunities, My inbox is open. If you
           have a question or just want to <Bold>say hello</Bold>, I&apos;ll try
           my best to get back to you!{" "}

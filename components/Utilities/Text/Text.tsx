@@ -5,7 +5,7 @@ type Props = {
 
 const Text = (props: Props) => {
   let className =
-    "w-full mx-auto leading-relaxed md:leading-relaxed text-base-50 md:text-lg ";
+    "w-full leading-relaxed md:leading-relaxed text-base-50 md:text-lg ";
 
   if (props.className) className += props.className;
 

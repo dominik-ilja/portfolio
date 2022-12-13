@@ -26,12 +26,10 @@ const Showcase = () => {
         </div>
         <div className="flex flex-col sm:items-start gap-y-7">
           <MainTitle underline={false}>Dominik Ilja</MainTitle>
-          <Text className="max-w-2xl">
-            I&apos;m probably not the typical designer positioned behind an
-            Illustrator artboard adjusting pixels, but I design. Immersed in
-            stylesheets tweaking font sizes and contemplating layouts is where
-            you&apos;ll find me (~_^). I&apos;m committed to creating fluent
-            user experiences while staying fashionable.
+          <Text className="max-w-xl">
+            I love creating products that solve problems for people. I&apos;m a
+            developer because I want to bring visions to life. I would love to
+            see what I could do for you and what we could create together!
           </Text>
           <Button
             internalLink={`projects/${PROJECTS[0].id}`}

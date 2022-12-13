@@ -21,16 +21,16 @@ import ProjectContainer from "../../components/ProjectContainer/ProjectContainer
 
 const ColorCards = () => {
   const technologies = [
-    { name: "Axios", type: "backend" },
-    { name: "Color API", type: "backend" },
     { name: "CSS", type: "frontend" },
-    { name: "Figma", type: "workflow" },
-    { name: "Figma API", type: "backend" },
     { name: "HTML", type: "frontend" },
     { name: "JavaScript", type: "frontend" },
+    { name: "TypeScript", type: "frontend" },
+    { name: "Axios", type: "backend" },
+    { name: "Color API", type: "backend" },
+    { name: "Figma API", type: "backend" },
+    { name: "Figma", type: "workflow" },
     { name: "Git", type: "workflow" },
     { name: "GitHub", type: "workflow" },
-    { name: "TypeScript", type: "frontend" },
   ];
 
   return (
@@ -63,7 +63,7 @@ const ColorCards = () => {
           </ProjectSection>
 
           <ProjectSection>
-            <SectionTitle title="Technologies" />
+            <SectionTitle>Technologies</SectionTitle>
             <TechnologyGrid technologies={technologies} />
           </ProjectSection>
 
