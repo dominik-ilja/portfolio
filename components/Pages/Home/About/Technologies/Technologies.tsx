@@ -21,13 +21,15 @@ const Technologies = () => {
   return (
     <div>
       <h2 className="mb-6 text-xl text-center text-base-40">Technologies</h2>
-      <div className="grid grid-cols-1 gap-y-8">
+      <div className="grid grid-cols-resp-fill gap-y-8">
         {technologies.map((tech, i) => (
-          <div key={tech.title} className="flex flex-col items-center gap-y-4">
+          <div key={tech.title} className="flex flex-col items-center gap-y-6">
             <div
               className={`${TECH_CLASSES[i].textClasses} text-xl flex items-center gap-x-3`}
             >
-              <h3 className="whitespace-nowrap">{tech.title}</h3>
+              <h3 className="whitespace-nowrap sm:text-2xl md:text-3xl">
+                {tech.title}
+              </h3>
               <tech.icon className="h-6" />
             </div>
             <Underline className={TECH_CLASSES[i].bgClasses} />
