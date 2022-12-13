@@ -4,7 +4,7 @@ type Props = {
 };
 
 const Code = (props: Props) => {
-  let className = "inline-block bg-base-5 text-red ";
+  let className = "bg-base-5 text-red ";
 
   if (props.className) className += props.className;
 

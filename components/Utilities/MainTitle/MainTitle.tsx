@@ -14,7 +14,7 @@ type TitleProps = {
 const Title = (props: TitleProps) => {
   return (
     <h1
-      className={`text-5xl md:text-7xl lg:text-8xl  text-center text-white ${
+      className={`text-5xl md:text-7xl lg:text-8xl text-center text-white ${
         props.className || ""
       }`}
     >

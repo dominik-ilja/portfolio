@@ -5,6 +5,8 @@ import MainTitle from "../../components/Utilities/MainTitle/MainTitle";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import { PROJECTS } from "../../constants/projectData";
 import FilterMenu from "../../components/Pages/Home/Projects/FilterMenu/FilterMenu";
+import Section from "../../components/Utilities/Section/Section";
+import Container from "../../components/Container/Container";
 
 const Projects = () => {
   const [projectList, setProjectList] = useState(PROJECTS);
@@ -26,8 +28,8 @@ const Projects = () => {
 
   return (
     <Layout>
-      <div className="container px-3 mx-auto">
-        <div className="pb-16">
+      <Container>
+        <Section className="pt-0">
           <MainTitle underline={true} className="mb-12">
             Projects
           </MainTitle>
@@ -48,9 +50,9 @@ const Projects = () => {
               tech={tech}
             />
           )}
-        </div>
+        </Section>
         <ProjectCards projects={projectList} className="pb-16" />
-      </div>
+      </Container>
     </Layout>
   );
 };
