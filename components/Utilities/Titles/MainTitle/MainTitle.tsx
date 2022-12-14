@@ -1,4 +1,4 @@
-import Underline from "../Underline/Underline";
+import Underline from "../../Underline/Underline";
 
 type Props = {
   children?: React.ReactNode;

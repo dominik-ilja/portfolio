@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "../Utilities/Button/Button";
 import GitHub from "../Utilities/Icons/GitHub/GitHub";
-import MainTitle from "../Utilities/MainTitle/MainTitle";
+import MainTitle from "../Utilities/Titles/MainTitle/MainTitle";
 import Section from "../Utilities/Section/Section";
 import CodeIcon from "../Utilities/Icons/Code/Code";
 

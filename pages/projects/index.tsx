@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import Button from "../../components/Utilities/Button/Button";
-import MainTitle from "../../components/Utilities/MainTitle/MainTitle";
+import MainTitle from "../../components/Utilities/Titles/MainTitle/MainTitle";
 import ProjectCards from "../../components/ProjectCards/ProjectCards";
 import { PROJECTS } from "../../constants/projectData";
 import FilterMenu from "../../components/Pages/Home/Projects/FilterMenu/FilterMenu";

@@ -6,7 +6,7 @@ import ProjectSection from "../../components/ProjectSection/ProjectSection";
 import TechnologyGrid from "../../components/TechnologyGrid/TechnologyGrid";
 import Bold from "../../components/Utilities/Bold/Bold";
 import Code from "../../components/Utilities/Code/Code";
-import SectionTitle from "../../components/Utilities/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/Utilities/Titles/SectionTitle/SectionTitle";
 import Text from "../../components/Utilities/Text/Text";
 import thumbnail from "../../public/projects/time_tracker/thumbnail.png";
 import erd_diagram from "../../public/projects/time_tracker/erd_diagram.svg";
@@ -18,7 +18,7 @@ const TimeTracker = () => {
     { name: "Axios", type: "frontend" },
     { name: "React", type: "frontend" },
     { name: "React Router", type: "frontend" },
-    { name: "Tailwind", type: "frontend" },
+    { name: "TailwindCSS", type: "frontend" },
     { name: "TypeScript", type: "frontend" },
     { name: "Express", type: "backend" },
     { name: "Heroku", type: "backend" },

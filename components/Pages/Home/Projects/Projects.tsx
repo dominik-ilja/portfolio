@@ -1,5 +1,5 @@
 import Button from "../../../Utilities/Button/Button";
-import SectionTitle from "../../../Utilities/SectionTitle/SectionTitle";
+import SectionTitle from "../../../Utilities/Titles/SectionTitle/SectionTitle";
 import ProjectCards from "../../../ProjectCards/ProjectCards";
 import { PROJECTS } from "../../../../constants/projectData";
 import Section from "../../../Utilities/Section/Section";

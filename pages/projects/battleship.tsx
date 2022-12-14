@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import ProjectContainer from "../../components/ProjectContainer/ProjectContainer";
 import ProjectIntro from "../../components/ProjectIntro/ProjectIntro";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
-import SectionTitle from "../../components/Utilities/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/Utilities/Titles/SectionTitle/SectionTitle";
 import Text from "../../components/Utilities/Text/Text";
 import thumbnail from "../../public/projects/battleship/thumbnail.png";
 

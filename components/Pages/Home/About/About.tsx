@@ -1,6 +1,6 @@
 import Container from "../../../Container/Container";
 import Section from "../../../Utilities/Section/Section";
-import SectionTitle from "../../../Utilities/SectionTitle/SectionTitle";
+import SectionTitle from "../../../Utilities/Titles/SectionTitle/SectionTitle";
 import Text from "../../../Utilities/Text/Text";
 import GitHubStats from "./GitHubStats/GitHubStats";
 import Technologies from "./Technologies/Technologies";

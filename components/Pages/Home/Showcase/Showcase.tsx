@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../../../Utilities/Button/Button";
 import moon from "../../../../public/moon.svg";
 import { PROJECTS } from "../../../../constants/projectData";
-import MainTitle from "../../../Utilities/MainTitle/MainTitle";
+import MainTitle from "../../../Utilities/Titles/MainTitle/MainTitle";
 import Text from "../../../Utilities/Text/Text";
 import Section from "../../../Utilities/Section/Section";
 import Container from "../../../Container/Container";

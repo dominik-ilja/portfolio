@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "../../../Utilities/Button/Button";
-import SectionTitle from "../../../Utilities/SectionTitle/SectionTitle";
+import SectionTitle from "../../../Utilities/Titles/SectionTitle/SectionTitle";
 import arrows from "../../../../public/arrows.svg";
 import Text from "../../../Utilities/Text/Text";
 import Bold from "../../../Utilities/Bold/Bold";
