@@ -1,18 +1,24 @@
 import { MouseEventHandler } from "react";
-import styles from "./HeaderToggle.module.scss";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
+  className?: string;
   onClick: MouseEventHandler;
   open: boolean;
 };
 
-const HeaderToggle = (props: Props) => {
+const HeaderToggle = ({ className, onClick, open }: Props) => {
+  const classes = twMerge(
+    "relative flex items-center w-8 h-8 mt-3 cursor-pointer",
+    className
+  );
+
   let line = "absolute right-0 bg-white h-[3px] transition-all";
   let line1: string;
   let line2: string;
   let line3: string;
 
-  if (props.open) {
+  if (open) {
     line += " w-full";
     line1 = "rotate-[135deg]";
     line2 = "scale-0";
@@ -24,10 +30,7 @@ const HeaderToggle = (props: Props) => {
   }
 
   return (
-    <button
-      onClick={props.onClick}
-      className={`items-center cursor-pointer flex mt-3 w-8 h-8 relative`}
-    >
+    <button onClick={onClick} className={classes}>
       <div className={`${line} ${line1}`} />
       <div className={`${line} ${line2}`} />
       <div className={`${line} ${line3}`} />
