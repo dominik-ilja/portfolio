@@ -9,7 +9,7 @@ import Container from "../../../Container/Container";
 
 const Contact = () => {
   return (
-    <Section className="pb-4">
+    <Section id="contact" className="pb-4">
       <Container className="flex flex-col gap-y-9">
         <SectionTitle title="Contact" />
         <Text className="max-w-xl mx-auto">
