@@ -34,6 +34,12 @@
   --color-red-faded: hsl(335, 56%, 17%);
 }
 
+/* Used for debugging */
+
+/* * {
+  outline: 1px solid red;
+} */
+
 body {
   background-color: var(--color-black);
   color: var(--color-base-70);
