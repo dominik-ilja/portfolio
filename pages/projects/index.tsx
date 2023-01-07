@@ -27,33 +27,34 @@ const Projects = () => {
   }, [tag, tech]);
 
   return (
-    <Layout>
-      <Container>
-        <Section className="pt-0">
-          <MainTitle underline={true} className="mb-12">
-            Projects
-          </MainTitle>
-          <Button
-            onClick={() => setShowFilter(!showFilter)}
-            rounded={true}
-            className="block mx-auto bg-base-10"
-          >
-            Filter Projects
-          </Button>
+    <>
+      <Layout>
+        <Container>
+          <Section className="pt-0">
+            <MainTitle underline={true} className="mb-12">
+              Projects
+            </MainTitle>
+            <Button
+              onClick={() => setShowFilter(true)}
+              rounded={true}
+              className="block mx-auto bg-base-10"
+            >
+              Filter Projects
+            </Button>
+          </Section>
+          <ProjectCards projects={projectList} className="pb-16" />
+        </Container>
+      </Layout>
 
-          {showFilter && (
-            <FilterMenu
-              onExitClick={() => setShowFilter(false)}
-              setTag={setTag}
-              tag={tag}
-              setTech={setTech}
-              tech={tech}
-            />
-          )}
-        </Section>
-        <ProjectCards projects={projectList} className="pb-16" />
-      </Container>
-    </Layout>
+      <FilterMenu
+        onExitClick={() => setShowFilter(false)}
+        setTag={setTag}
+        tag={tag}
+        setTech={setTech}
+        tech={tech}
+        hidden={!showFilter}
+      />
+    </>
   );
 };
 
