@@ -1,14 +1,24 @@
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+import PropTypes from "prop-types";
+import { twMerge } from "tailwind-merge";
+
+type Props = React.HTMLAttributes<HTMLElement>;
+
+const Section = ({ children, className, ...props }: Props) => {
+  const classes = twMerge("py-16", className);
+
+  return (
+    <section className={classes} {...props}>
+      {children}
+    </section>
+  );
 };
 
-const Section = (props: Props) => {
-  let className = "py-16 ";
+Section.propTypes = {
+  className: PropTypes.string,
+};
 
-  if (props.className) className += props.className;
-
-  return <section className={className}>{props.children}</section>;
+Section.defaultProps = {
+  className: "",
 };
 
 export default Section;

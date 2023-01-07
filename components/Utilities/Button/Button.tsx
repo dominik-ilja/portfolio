@@ -1,5 +1,7 @@
+import clsx from "clsx";
 import Link from "next/link";
 import { MouseEventHandler } from "react";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   children?: React.ReactNode;
@@ -8,46 +10,57 @@ type Props = {
   internalLink?: string;
   externalLink?: string;
   onClick?: MouseEventHandler;
+  target?: "_blank" | "_parent" | "_self" | "_top";
 };
 
-const Button = (props: Props) => {
-  let className = "px-5 py-3 text-white transition-opacity hover:opacity-80";
+const Button = ({
+  className,
+  children,
+  externalLink,
+  internalLink,
+  onClick,
+  rounded,
+  target,
+  ...props
+}: Props) => {
+  const classes = twMerge(
+    "px-5 py-3 text-center text-white transition-opacity hover:opacity-80",
+    className,
+    clsx({
+      "rounded-md": rounded,
+    })
+  );
 
-  if (props.className) {
-    className = `${className} ${props.className}`;
-  }
-  if (props.rounded) {
-    className = `${className} rounded-md`;
-  }
-
-  if (props.internalLink !== undefined) {
+  if (internalLink !== undefined) {
     return (
-      <Link
-        onClick={props.onClick}
-        href={props.internalLink}
-        className={className}
-      >
-        {props.children}
+      <Link onClick={onClick} href={internalLink} className={classes}>
+        {children}
       </Link>
     );
   }
-  if (props.externalLink !== undefined) {
+  if (externalLink !== undefined) {
     return (
       <a
-        onClick={props.onClick}
-        href={props.externalLink}
-        className={className}
+        onClick={onClick}
+        href={externalLink}
+        className={classes}
+        target={target}
+        rel={target ? "noreferrer noopener" : undefined}
       >
-        {props.children}
+        {children}
       </a>
     );
   }
 
   return (
-    <button onClick={props.onClick} className={className}>
-      {props.children}
+    <button onClick={onClick} className={classes}>
+      {children}
     </button>
   );
+};
+
+Button.defaultProps = {
+  className: "",
 };
 
 export default Button;
