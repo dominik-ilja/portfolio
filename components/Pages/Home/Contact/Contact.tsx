@@ -10,7 +10,7 @@ import Container from "../../../Container/Container";
 const Contact = () => {
   return (
     <Section id="contact" className="pb-4">
-      <Container className="flex flex-col gap-y-9">
+      <Container className="flex flex-col mb-8 gap-y-9">
         <SectionTitle title="Contact" />
         <Text className="max-w-xl mx-auto">
           I&apos;m currently open to new opportunities, My inbox is open. If you
@@ -29,7 +29,7 @@ const Contact = () => {
         >
           Say Hello
         </Button>
-        <Image src={arrows} alt="arrows" className="self-center" />
+        <Image src={arrows} alt="arrows" className="self-center lg:hidden" />
       </Container>
     </Section>
   );

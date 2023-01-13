@@ -1,14 +1,19 @@
+import { twMerge } from "tailwind-merge";
+
 type Props = {
   children?: React.ReactNode;
   className?: string;
 };
 
-const Container = (props: Props) => {
-  let className = "container px-3 mx-auto ";
+const Container = ({ className, ...props }: Props) => {
+  const classes = twMerge("container px-3 lg:px-16 mx-auto", className);
+  const classNames = "container lg:max-w-[1100px]";
 
-  if (props.className) className += props.className;
+  return <div className={classes}>{props.children}</div>;
+};
 
-  return <div className={className}>{props.children}</div>;
+Container.defaultProps = {
+  className: "",
 };
 
 export default Container;

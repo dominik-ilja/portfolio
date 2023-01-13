@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="py-4 mt-auto">
       <div className="container flex flex-col items-center justify-center mx-auto gap-y-3">
-        <menu className="flex gap-x-5">
+        <menu className="flex gap-5 lg:bottom-0 lg:flex-col lg:fixed lg:left-6 lg:after:w-[1px] lg:after:h-12 lg:after:bg-base-30 lg:items-center">
           {socials.map((social) => (
             <li key={social.alt}>
               <a
@@ -42,6 +42,14 @@ const Footer = () => {
             </li>
           ))}
         </menu>
+        <div className="lg:flex lg:flex-col lg:bottom-0 lg:fixed lg:right-6 lg:after:w-[1px] lg:after:h-12 lg:after:bg-base-30 lg:items-center">
+          <a
+            className="hidden lg:block mb-5 transition-opacity hover:opacity-50 [writing-mode:vertical-rl]"
+            href="mailto:dominik.ilja.work@gmail.com"
+          >
+            dominik.ilja.developer@gmail.com
+          </a>
+        </div>
         <div className="flex items-end gap-x-2">
           <small className="text-base-30">Developed by Dominik Ilja</small>
           <Image src={logo_footer} alt="Logo" />

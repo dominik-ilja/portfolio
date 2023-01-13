@@ -59,8 +59,8 @@ export const PROJECTS: Project[] = [
 
 export const githubStats: StatObject[] = [
   { stat: "Total Stars Earned:", value: 11 },
-  { stat: "Total Commits (2022):", value: 639 },
-  { stat: "Total PRs:", value: 45 },
+  { stat: "Total Commits (2022):", value: 669 },
+  { stat: "Total PRs:", value: 46 },
   { stat: "Total Issues:", value: 27 },
   { stat: "Contributed To:", value: 9 },
 ];

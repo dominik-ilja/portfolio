@@ -21,7 +21,7 @@ const Technologies = () => {
   return (
     <div>
       <h2 className="mb-6 text-xl text-center text-base-40">Technologies</h2>
-      <div className="grid grid-cols-resp-fill gap-y-8">
+      <div className="grid grid-cols-resp-fit gap-y-8">
         {technologies.map((tech, i) => (
           <div key={tech.title} className="flex flex-col items-center gap-y-6">
             <div
