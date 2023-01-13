@@ -11,11 +11,11 @@ type Props = {
 };
 
 const Overlay = forwardRef<HTMLDivElement, Props>(
-  ({ children, hidden, onClick, ...props }: Props, ref) => {
-    const [allowScroll, blockScroll] = useScrollBlock();
+  ({ blockScroll, children, hidden, onClick, ...props }: Props, ref) => {
+    const [allowScroll, preventScroll] = useScrollBlock();
 
-    if (props.blockScroll) {
-      hidden ? allowScroll() : blockScroll();
+    if (blockScroll) {
+      hidden ? allowScroll() : preventScroll();
     }
 
     const classes = twMerge(
@@ -24,7 +24,7 @@ const Overlay = forwardRef<HTMLDivElement, Props>(
     );
 
     return (
-      <div className={classes} ref={ref} onClick={onClick}>
+      <div className={classes} ref={ref} onClick={onClick} {...props}>
         {children}
       </div>
     );
@@ -34,7 +34,7 @@ const Overlay = forwardRef<HTMLDivElement, Props>(
 Overlay.displayName = "Overlay";
 
 Overlay.defaultProps = {
-  hidden: false,
+  hidden: true,
   blockScroll: true,
 };
 

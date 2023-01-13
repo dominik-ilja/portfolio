@@ -15,7 +15,7 @@ const Header = () => {
   const [modalIsHidden, setModalIsHidden] = useState(true);
   const [allowScroll, blockScroll] = useScrollBlock();
 
-  !menuIsHidden || !modalIsHidden ? blockScroll() : allowScroll();
+  menuIsHidden && modalIsHidden ? allowScroll() : blockScroll();
 
   const links = [
     { name: "Home", route: "/", exact: true },
