@@ -7,11 +7,23 @@ import icon_twitter from "../../public/icons/icon_twitter.svg";
 import logo_footer from "../../public/icons/logo_footer.svg";
 
 const socials = [
-  { src: icon_github, alt: "GitHub", href: "#" },
-  { src: icon_codepen, alt: "Codepen", href: "#" },
-  { src: icon_linkedin, alt: "LinkedIn", href: "#" },
-  { src: icon_youtube, alt: "YouTube", href: "#" },
-  { src: icon_twitter, alt: "Twitter", href: "#" },
+  { src: icon_github, alt: "GitHub", href: "https://github.com/Dominik-Ilja" },
+  { src: icon_codepen, alt: "Codepen", href: "https://codepen.io/your-work/" },
+  {
+    src: icon_linkedin,
+    alt: "LinkedIn",
+    href: "https://www.linkedin.com/in/dominik-kulak/",
+  },
+  {
+    src: icon_youtube,
+    alt: "YouTube",
+    href: "https://www.youtube.com/channel/UCDXWSQNccULt7U4kzsRWVLw",
+  },
+  {
+    src: icon_twitter,
+    alt: "Twitter",
+    href: "https://twitter.com/dominik_ilja",
+  },
 ];
 
 const Footer = () => {
