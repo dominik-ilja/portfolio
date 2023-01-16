@@ -7,7 +7,7 @@ type Props = {
 };
 
 const GitHubStats = ({ className, ...props }: Props) => {
-  const classes = twMerge(className, "flex flex-row-reverse");
+  const classes = twMerge(className, "flex flex-col lg:flex-row-reverse");
 
   return (
     <div className={classes}>
