@@ -1,4 +1,5 @@
 import Image from "next/image";
+import axios from "axios";
 import Container from "../../components/Container/Container";
 import Layout from "../../components/Layout/Layout";
 import SectionTitle from "../../components/Utilities/Titles/SectionTitle/SectionTitle";
@@ -12,14 +13,17 @@ import image_ui from "../../public/projects/color_cards/ui.png";
 import image_color_api from "../../public/projects/color_cards/color_api.png";
 import image_cards from "../../public/projects/color_cards/cards.png";
 import image_application from "../../public/projects/color_cards/application.gif";
-import { FIGMA_STATS } from "../../constants/projectData";
 import StatCard from "../../components/Cards/StatCard/StatCard";
 import Text from "../../components/Utilities/Text/Text";
 import ProjectIntro from "../../components/ProjectIntro/ProjectIntro";
 import ProjectSection from "../../components/ProjectSection/ProjectSection";
 import ProjectContainer from "../../components/ProjectContainer/ProjectContainer";
 
-const ColorCards = () => {
+type Props = {
+  stats: StatObject[];
+};
+
+const ColorCards = ({ stats }: Props) => {
   const technologies = [
     { name: "CSS", type: "frontend" },
     { name: "HTML", type: "frontend" },
@@ -56,7 +60,7 @@ const ColorCards = () => {
           <ProjectSection>
             <SectionTitle>Stats</SectionTitle>
             <div className="grid gap-4 sm:grid-cols-2">
-              {FIGMA_STATS.map((data) => (
+              {stats.map((data) => (
                 <StatCard key={data.stat} data={data} />
               ))}
             </div>
@@ -211,5 +215,44 @@ const ColorCards = () => {
     </Layout>
   );
 };
+
+// TODO:
+export async function getStaticProps() {
+  try {
+    const res = await axios.get(
+      "https://figma-plugin-stats.onrender.com/api/most_recent"
+    );
+    const [stats] = res.data;
+
+    return {
+      props: {
+        stats: [
+          {
+            stat: "Views",
+            value: stats.views,
+          },
+          {
+            stat: "Users",
+            value: stats.users,
+          },
+          {
+            stat: "Likes",
+            value: stats.comments,
+          },
+          {
+            stat: "Comments",
+            value: stats.comments,
+          },
+        ],
+      },
+    };
+  } catch (e) {
+    return {
+      props: {
+        stats: [],
+      },
+    };
+  }
+}
 
 export default ColorCards;
