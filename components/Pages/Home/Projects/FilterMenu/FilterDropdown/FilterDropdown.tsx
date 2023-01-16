@@ -1,4 +1,6 @@
-import { Dispatch, useState } from "react";
+import clsx from "clsx";
+import { Dispatch, MouseEventHandler } from "react";
+import { twMerge } from "tailwind-merge";
 import { capitalize } from "../../../../../../utilities/utilities";
 import Chevron from "../../../../../Utilities/Icons/Chevron/Chevron";
 
@@ -7,11 +9,11 @@ type Props = {
   setItem: Dispatch<string>;
   items: string[];
   capitalize?: boolean;
+  onClick?: MouseEventHandler;
+  show?: boolean;
 };
 
 const FilterDropdown = (props: Props) => {
-  const [show, setShow] = useState(false);
-
   const selectedItem = props.selectedItem
     ? props.capitalize
       ? capitalize(props.selectedItem)
@@ -19,15 +21,16 @@ const FilterDropdown = (props: Props) => {
     : "Any";
 
   return (
-    <div onClick={() => setShow(!show)} className="relative">
+    <div onClick={props.onClick} className="relative">
       <button className="flex items-center justify-between w-full p-2 border text-base-30 border-base-30">
         {selectedItem}
         <Chevron />
       </button>
       <ul
-        className={`${
-          show ? "" : "hidden"
-        } border border-base-30 absolute left-0 top-full bg-black right-0 z-10 max-h-[50vh] overflow-y-scroll`}
+        className={twMerge(
+          "border border-base-30 absolute left-0 top-full bg-black right-0 z-10 max-h-[50vh] overflow-y-scroll",
+          clsx({ hidden: !props.show })
+        )}
       >
         {props.items.map((item) => (
           <li key={item} className="border-b border-base-30 last:border-b-0">
@@ -42,6 +45,11 @@ const FilterDropdown = (props: Props) => {
       </ul>
     </div>
   );
+};
+
+FilterDropdown.defaultProps = {
+  show: false,
+  capitalize: true,
 };
 
 export default FilterDropdown;

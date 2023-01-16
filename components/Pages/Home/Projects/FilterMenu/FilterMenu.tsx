@@ -1,4 +1,4 @@
-import { Dispatch, MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, useState } from "react";
 import {
   PROJECT_TAGS,
   PROJECT_TECHNOLOGIES,
@@ -25,6 +25,27 @@ const FilterMenu = ({
   tech,
   ...props
 }: Props) => {
+  const [activeDropdown, setActiveDropdown] = useState<number | null>();
+
+  function updateDropdown(index: number) {
+    activeDropdown === index
+      ? setActiveDropdown(null)
+      : setActiveDropdown(index);
+  }
+
+  /*
+    TODO: Try and make dropdowns more re-usable
+
+    What if we wanted to filter by something that wasn't tech and project related?
+  */
+  /*   const dropdowns = [
+      {
+        words: ["Category", "is"],
+        items: ["any", ...PROJECT_TAGS],
+        type: "project",
+      },
+    ]; */
+
   return (
     <Modal
       hidden={hidden}
@@ -42,18 +63,20 @@ const FilterMenu = ({
           <div className="text-base-50">Category</div>
           <div className="px-4 text-base-30">is</div>
           <FilterDropdown
+            onClick={() => updateDropdown(0)}
             selectedItem={tag}
             setItem={setTag}
             items={["any", ...PROJECT_TAGS]}
-            capitalize={true}
+            show={activeDropdown === 0}
           />
           <div className="text-base-50">Project</div>
           <div className="px-4 text-base-30">uses</div>
           <FilterDropdown
+            onClick={() => updateDropdown(1)}
             selectedItem={tech}
             setItem={setTech}
             items={["any", ...PROJECT_TECHNOLOGIES]}
-            capitalize={true}
+            show={activeDropdown === 1}
           />
         </div>
         <Button

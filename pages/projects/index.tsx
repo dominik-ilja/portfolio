@@ -14,6 +14,9 @@ const Projects = () => {
   const [tag, setTag] = useState<string>("any");
   const [tech, setTech] = useState<string>("any");
 
+  // TODO: try and make state more flexible for FilterMenu
+  // const filterTags = [{type: "project", value: "design"}, {type: "tech", value: "css"}]
+
   useEffect(() => {
     setProjectList(
       PROJECTS.filter((project) => {
