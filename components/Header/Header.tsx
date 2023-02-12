@@ -34,7 +34,7 @@ const Header = () => {
             className="max-w-[120px] md:max-w-[200px] lg:max-w-[250px] relative left-4"
           />
           <nav
-            className={`fixed top-0 bottom-0 left-0 right-0 z-30 overflow-y-scroll duration-700 transition-all bg-base-1 md:bg-[transparent] md:pt-4 md:static md:flex md:translate-x-0 ${
+            className={`fixed top-0 bottom-0 left-0 right-0 z-30 overflow-y-scroll lg:overflow-hidden duration-700 transition-all bg-base-1 md:bg-[transparent] md:pt-4 md:static md:flex md:translate-x-0 ${
               menuIsHidden ? "translate-x-full" : ""
             }`}
           >
