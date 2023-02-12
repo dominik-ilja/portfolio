@@ -30,7 +30,7 @@ const Battleship = () => {
         <ProjectIntro
           title="Battleship"
           thumbnail={thumbnail}
-          codeLink="https://github.com/Dominik-Ilja/battleship"
+          codeLink="https://github.com/dominik-ilja/battleship"
           viewLink="https://battleship-ilja.netlify.app/"
         >
           <Text>

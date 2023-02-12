@@ -43,7 +43,7 @@ const ColorCards = ({ stats }: Props) => {
         <ProjectIntro
           title="Color Cards"
           thumbnail={image_thumbnail}
-          codeLink="https://github.com/Dominik-Ilja/Color-Cards"
+          codeLink="https://github.com/dominik-ilja/color-cards"
           viewLink="https://www.figma.com/community/plugin/1127675179361433108"
         >
           <Text>
