@@ -37,7 +37,7 @@ const TimeTracker = () => {
         <ProjectIntro
           title="Time Tracker"
           thumbnail={thumbnail}
-          codeLink="https://github.com/Dominik-Ilja/time-tracker"
+          codeLink="https://github.com/dominik-ilja/time-tracker"
           viewLink="https://timer-tracker-ilja.netlify.app/"
         >
           <Text>

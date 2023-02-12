@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 /*
   Credit: https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da

@@ -10,7 +10,7 @@ export const links = {
   about: "#about",
   contact: "#contact",
   linkedin: "https://www.linkedin.com/in/dominik-kulak/",
-  github: "https://github.com/Dominik-Ilja",
+  github: "https://github.com/dominik-ilja",
   email: "mailto:dominik.ilja.developer@gmail.com",
 };
 

@@ -34,7 +34,7 @@ const PokeFinder = () => {
         <ProjectIntro
           title="Poke Finder"
           thumbnail={thumbnail}
-          codeLink="https://github.com/Dominik-Ilja/poke-finder"
+          codeLink="https://github.com/dominik-ilja/poke-finder"
           viewLink="https://poke-finder-ilja.netlify.app/"
         >
           <Text>
